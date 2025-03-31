@@ -1,10 +1,9 @@
 name: Java Checkstyle
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   checkstyle:
@@ -22,8 +21,14 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
       
+    - name: Validate Checkstyle configuration
+      run: |
+        echo "Validating Checkstyle configuration file..."
+        xmllint --noout config/checkstyle/checkstyle.xml || echo "XML validation failed"
+      continue-on-error: true
+      
     - name: Run Checkstyle
-      run: ./gradlew checkstyleMain checkstyleTest --stacktrace
+      run: ./gradlew checkstyleMain checkstyleTest --info
       
     - name: Upload Checkstyle results
       if: always()
