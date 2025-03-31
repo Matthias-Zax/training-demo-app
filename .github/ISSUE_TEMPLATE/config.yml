@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Book Store Application Documentation
+    url: https://github.com/Matthias-Zax/training-demo-app/blob/main/README.md
+    about: Please check our documentation before creating an issue
