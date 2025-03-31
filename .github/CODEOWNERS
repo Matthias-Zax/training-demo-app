@@ -1,0 +1,44 @@
+# This is a CODEOWNERS file to define individuals or teams responsible for code in this repository
+# Each line is a file pattern followed by one or more owners.
+
+# These owners will be the default owners for everything in the repository
+# unless a later match takes precedence
+*       @github/team-all
+
+# Backend code owners
+/src/main/java/com/rbinternational/goit_demo_app/controller/    @github/team-all
+/src/main/java/com/rbinternational/goit_demo_app/service/       @github/team-all
+/src/main/java/com/rbinternational/goit_demo_app/repository/    @github/team-all
+/src/main/java/com/rbinternational/goit_demo_app/model/         @github/team-all
+
+# Frontend code owners
+/src/main/resources/templates/    @github/team-all
+/src/main/resources/static/       @github/team-all
+
+# Test code owners
+/src/test/                        @github/team-all
+
+# API Test owners (Bruno tests)
+# More specific patterns for Bruno tests
+/bruno/                                  @github/team-all
+/bruno/collections/                      @github/test-engineers
+/bruno/collections/book-api/             @github/test-engineers
+/bruno/collections/book-api/*.bru        @github/test-engineers
+/bruno/environments/                     @github/test-engineers
+
+# CI/CD workflow owners
+/.github/workflows/                      @github/team-all @github/devop-engineers
+/.github/workflows/api-test.yml          @github/team-all @github/test-engineers @github/devop-engineers
+/.github/workflows/ci.yml                @github/devop-engineers
+/.github/workflows/checkstyle.yml        @github/devop-engineers
+/.github/workflows/codeql-analysis.yml   @github/devop-engineers
+/.github/workflows/sonarqube.yml         @github/devop-engineers
+
+# Build configuration owners
+/build.gradle                     @github/team-all
+/settings.gradle                  @github/team-all
+/gradle/                          @github/team-all
+
+# Documentation owners
+/README.md                        @github/team-all
+/LICENSE                          @github/team-all
