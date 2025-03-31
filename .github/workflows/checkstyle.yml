@@ -23,4 +23,12 @@ jobs:
       run: chmod +x gradlew
       
     - name: Run Checkstyle
-      run: ./gradlew checkstyleMain checkstyleTest
+      run: ./gradlew checkstyleMain checkstyleTest --stacktrace
+      
+    - name: Upload Checkstyle results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: checkstyle-report
+        path: build/reports/checkstyle/
+        retention-days: 7
