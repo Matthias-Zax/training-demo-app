@@ -1,0 +1,31 @@
+meta {
+  name: Create New Book
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/books
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "title": "Bruno Test Book",
+    "author": "Bruno API Tester",
+    "isbn": "9876543210",
+    "price": 24.99,
+    "description": "A book created through Bruno API test",
+    "publicationYear": 2025
+  }
+}
+
+assert {
+  res.status: 201
+  res.body.id != null: true
+  res.body.title: Bruno Test Book
+  res.body.author: Bruno API Tester
+  res.body.isbn: 9876543210
+  res.body.price: 24.99
+}

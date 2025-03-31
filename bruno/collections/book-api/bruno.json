@@ -1,0 +1,6 @@
+{
+  "name": "book-api",
+  "version": "1",
+  "schema": "https://schema.usebruno.com/v1.json",
+  "type": "collection"
+}

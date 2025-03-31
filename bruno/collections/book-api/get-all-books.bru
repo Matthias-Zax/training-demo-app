@@ -1,0 +1,18 @@
+meta {
+  name: Get All Books
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/books
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: 200
+  res.body.length > 0: true
+  res.body[0].title != null: true
+  res.body[0].author != null: true
+}

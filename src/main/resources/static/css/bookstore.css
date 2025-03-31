@@ -1,0 +1,290 @@
+:root {
+    --primary-color: #FFD700; /* Gold/Yellow */
+    --primary-dark: #E6C200;
+    --secondary-color: #222222; /* Almost black */
+    --secondary-light: #333333;
+    --accent-color: #FFF0A0; /* Light yellow */
+    --text-on-dark: #FFFFFF;
+    --text-on-light: #222222;
+    --danger-color: #FF4136;
+    --success-color: #2ECC40;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F8F8F8;
+    color: var(--secondary-color);
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: var(--secondary-color) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary-color) !important;
+    font-size: 1.5rem;
+}
+
+.navbar .nav-link {
+    color: var(--text-on-dark) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.navbar .btn-outline-light:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--primary-color);
+}
+
+/* Card styling */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    border-bottom: none;
+}
+
+.card-title {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.card-subtitle {
+    color: #666;
+}
+
+.book-card {
+    height: 100%;
+    border-left: 4px solid var(--primary-color);
+}
+
+.book-card .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.book-card .card-footer {
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    padding: 1rem;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: var(--secondary-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--text-on-dark);
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: var(--secondary-light);
+    border-color: var(--secondary-light);
+}
+
+.btn-outline-primary {
+    color: var(--secondary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.btn-outline-secondary {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-on-dark);
+}
+
+.btn-outline-danger {
+    color: var(--danger-color);
+    border-color: var(--danger-color);
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--danger-color);
+    color: var(--text-on-dark);
+}
+
+/* Badge styling */
+.badge.bg-primary {
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color);
+    font-weight: 600;
+    padding: 0.5em 0.8em;
+    border-radius: 20px;
+}
+
+/* Form styling */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 0.6rem 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    color: var(--secondary-color);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: var(--primary-color);
+}
+
+/* Alert styling */
+.alert-success {
+    background-color: #f0fff0;
+    border-color: var(--success-color);
+    color: #2c7a2c;
+}
+
+/* Footer styling */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--text-on-dark);
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer p {
+    margin-bottom: 0;
+    color: var(--primary-color);
+}
+
+/* Book details page */
+.book-details-header {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.book-details-header h1 {
+    color: var(--primary-color);
+}
+
+.book-details-header h1:after {
+    background-color: var(--primary-color);
+}
+
+.book-info-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Search bar */
+.search-bar {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.search-bar .form-control {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.search-bar .btn {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    font-weight: 600;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animated-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .card {
+        margin-bottom: 15px;
+    }
+    
+    .book-details-header {
+        padding: 1.5rem;
+    }
+}
