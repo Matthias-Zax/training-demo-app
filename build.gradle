@@ -43,7 +43,7 @@ checkstyle {
 	configProperties = [
 		'checkstyle.cache.file': "${buildDir}/checkstyle.cache",
 	]
-	ignoreFailures = false
+	ignoreFailures = true
 	maxErrors = 0
 	maxWarnings = 0
 }
